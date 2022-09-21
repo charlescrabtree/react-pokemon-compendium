@@ -51,3 +51,6 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Additional considerations
 - Is any of your state redundant? For example, if you're tracking `wins`, `losses`, and `total`, you can probably get rid of `losses` state, and calculate it as `total - wins`.
 - Where should each piece of state live? How are you going to get data from where it lives to where it needs to be?
+
+## Whimsical planning artifact
+-Here we designed out our app. https://whimsical.com/pokemon-compendium-SoUPqb7so8tAUxdewtrKMe
