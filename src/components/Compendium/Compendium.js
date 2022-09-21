@@ -1,4 +1,4 @@
-import { usePokemon } from "../../hooks/usePokemon";
+import { usePokemon } from '../../hooks/usePokemon';
 import './Compendium.css';
 
 export default function Compendium() {
