@@ -3,6 +3,7 @@ export async function fetchPokemon(selectedType) {
   if (selectedType !== 'all') {
     params.set('type', selectedType);
   }
+  // eslint-disable-next-line no-console
   console.log(params.toString());
   const resp = await fetch(
     `https://pokedex-alchemy.herokuapp.com/api/pokedex?${params.toString()}`
@@ -12,7 +13,7 @@ export async function fetchPokemon(selectedType) {
 }
 
 export async function fetchTypes() {
+  const resp = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex/types`);
   const data = await resp.json();
-  const resp = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex`);
-  return data.results;
+  return data;
 }

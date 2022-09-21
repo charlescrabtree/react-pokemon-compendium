@@ -4,11 +4,12 @@ import { fetchPokemon, fetchTypes } from '../services/pokemon';
 export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedType, setSelectedType] = useState('bug');
+  const [selectedType, setSelectedType] = useState('fighting');
   const [types, setTypes] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
+      // eslint-disable-next-line no-console
       console.log('running useEffect', Math.random());
 
       try {
@@ -16,6 +17,7 @@ export function usePokemon() {
         setPokemon(data);
         setLoading(false);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e);
       }
     };
@@ -26,8 +28,10 @@ export function usePokemon() {
     const loadTypes = async () => {
       try {
         const data = await fetchTypes();
+        console.log(data);
         setTypes(data.map((type) => type.type));
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e);
       }
     };
