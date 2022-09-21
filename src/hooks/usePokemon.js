@@ -1,16 +1,23 @@
 import { useState, useEffect } from 'react';
+import { fetchPokemon } from '../services/pokemon';
 
 export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadData = () => {
-        // will load data from API
-        // will set data in state
+    const loadData = async () => {
+
+      try {
+        const data = await fetchPokemon();
+        setPokemon(data);
+        setLoading(false);
+      } catch (e) {
+        console.error(e);
+      }
     };
     loadData();
   }, []);
 
-  return { loading };
+  return { loading, pokemon };
 }
