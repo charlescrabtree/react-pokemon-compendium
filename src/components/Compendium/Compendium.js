@@ -7,7 +7,7 @@ export default function Compendium() {
   if (loading) return <div className="loader"></div>;
   return (
     <div>
-      <Select option={types} changeHandler={setSelectedType} />
+      <Select options={types} changeHandler={setSelectedType} />
       {pokemon.map((poke) => (
         <div key={poke.id}>
           <h1>{poke.pokemon}</h1>
