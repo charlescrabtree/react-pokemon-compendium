@@ -28,7 +28,6 @@ export function usePokemon() {
     const loadTypes = async () => {
       try {
         const data = await fetchTypes();
-        console.log(data);
         setTypes(data.map((type) => type.type));
       } catch (e) {
         // eslint-disable-next-line no-console
