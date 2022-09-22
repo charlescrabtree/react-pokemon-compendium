@@ -1,5 +1,6 @@
 import './App.css';
 import Compendium from './components/Compendium/Compendium';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Compendium />
+      <Footer />
     </div>
   );
 }

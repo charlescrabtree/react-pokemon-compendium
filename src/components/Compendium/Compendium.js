@@ -10,7 +10,7 @@ export default function Compendium() {
       <Select options={types} changeHandler={setSelectedType} />
       <div className='container'>
         {pokemon.map((poke) => (
-          <div key={poke.id}>
+          <div className='poke' key={poke.id}>
             <img className='Images' src={poke.url_image} alt={poke.poke} />
             <h1>{poke.pokemon}</h1>
             <h3>{poke.type_1}</h3>
