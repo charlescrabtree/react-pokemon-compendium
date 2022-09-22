@@ -1,3 +1,5 @@
+import '../Controls/Select.css';
+
 export default function Select({ options, changeHandler }) {
   return (
     <select onChange={(e) => changeHandler(e.target.value)}>
