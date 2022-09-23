@@ -1,8 +1,13 @@
-export async function fetchPokemon(selectedType) {
+
+export async function fetchPokemon(selectedType, search) {
   const params = new URLSearchParams();
   if (selectedType !== 'all') {
     params.set('type', selectedType);
+  } 
+  if (search) {
+    params.set('pokemon', search);
   }
+
   // eslint-disable-next-line no-console
   console.log(params.toString());
   const resp = await fetch(
