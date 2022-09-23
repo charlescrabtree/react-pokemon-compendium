@@ -9,7 +9,6 @@ export default function Search({ setSearch }) {
         const form = e.target;
         const data = new FormData(form);
         const searchData = data.get('search');
-        //console.log('searchData', searchData);
         setSearch(searchData);}}>
         <label htmlFor="search">SEARCH FOR A POKEMON
           <input name="search" placeholder="enter name" />
