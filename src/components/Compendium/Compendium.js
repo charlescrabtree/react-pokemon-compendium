@@ -10,8 +10,8 @@ export default function Compendium() {
   return (
     <>
       <div>
-        <Search search={search} setSearch={setSearch} />
-        <Select options={types} changeHandler={setSelectedType} />
+        <Search search={search} setSearch={setSearch} setSelectedType={setSelectedType} />
+        <Select options={types} changeHandler={setSelectedType} setSearch={setSearch} />
         <div className='container'>
           {pokemon.map((poke) => (
             <div className='poke' key={poke.id}>

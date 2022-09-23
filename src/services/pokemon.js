@@ -4,7 +4,7 @@ export async function fetchPokemon(selectedType, search) {
   if (selectedType !== 'all') {
     params.set('type', selectedType);
   } 
-  if (search !== '') {
+  if (search) {
     params.set('pokemon', search);
   }
 
