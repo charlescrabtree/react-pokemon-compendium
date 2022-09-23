@@ -3,11 +3,19 @@ import './Search.css';
 
 export default function Search({ search, setSearch }) {
   return (
-    <div className='search'>
-      <label htmlFor="search">SEARCH BY POKEMON</label>
-      <input className="box" name="search" placeholder="enter name" value={search} onChange={(e) => {
-        setSearch(e.target.value);
-      }}></input>
-    </div>
+    <>
+      <form className='search' onSubmit={(e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const searchData = data.get('search');
+        console.log('searchData', searchData);
+        setSearch(searchData);}}>
+        <label htmlFor="search">SEARCH FOR A POKEMON
+          <input name="search" placeholder="enter name" />
+          <button>GO</button>
+        </label>
+      </form>
+    </>
   );
 }

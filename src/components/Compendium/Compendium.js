@@ -1,12 +1,11 @@
-import { useState } from 'react';
+
 import { usePokemon } from '../../hooks/usePokemon';
 import Search from '../Controls/Search';
 import Select from '../Controls/Select';
 import './Compendium.css';
 
 export default function Compendium() {
-  const { loading, pokemon, types, setSelectedType } = usePokemon();
-  const [search, setSearch] = useState('');
+  const { loading, pokemon, types, setSelectedType, search, setSearch } = usePokemon();
   if (loading) return <div className="loader"></div>;
   return (
     <>
