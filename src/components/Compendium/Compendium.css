@@ -1,0 +1,36 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #fff;
+    border-bottom-color: #ff3d00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('../../../public/pokemonbackground.png');
+}
+
+.poke {
+    color: aliceblue;
+    border: 2px black solid;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgba(0,0,0,.5);
+}
