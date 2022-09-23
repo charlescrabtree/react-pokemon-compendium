@@ -22,7 +22,6 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url('../../../public/pokemonbackground.png');
 }
 
 .poke {
