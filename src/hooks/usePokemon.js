@@ -10,7 +10,7 @@ export function usePokemon() {
 
   useEffect(() => {
     const loadData = async () => {
-
+      setLoading(true);
       try {
         const data = await fetchPokemon(selectedType, search);
         setPokemon(data);
